@@ -63,6 +63,7 @@ public:
 	GrpTreeState groupTreeState(){return stringToGrpTreeState(settings.value("Options/GroupTreeState").toString());}
 	bool hidePasswords(){return settings.value("UI/HidePasswords",true).toBool();}
 	bool hideUsernames(){return settings.value("UI/HideUsernames",true).toBool();}
+	bool hideComments(){return settings.value("UI/HideComments",true).toBool();}
 	QByteArray hSplitterPos(){return settings.value("UI/HSplitterPos").toByteArray();}
 	bool alwaysOnTop(){return settings.value("UI/AlwaysOnTop",false).toBool();}
 	IntegrPluginType integrPlugin(){return stringToIntegrPluginType(settings.value("Options/IntegrPlugin").toString());}
@@ -136,6 +137,7 @@ public:
 	void setGroupTreeState(GrpTreeState value){settings.setValue("Options/GroupTreeState",grpTreeStateToString(value));}
 	void setHidePasswords(bool value){settings.setValue("UI/HidePasswords",value);}
 	void setHideUsernames(bool value){settings.setValue("UI/HideUsernames",value);}
+	void setHideComments(bool value){settings.setValue("UI/HideComments",value);}
 	void setHSplitterPos(const QByteArray& value){settings.setValue("UI/HSplitterPos",value);}
 	void setAlwaysOnTop(bool value){settings.setValue("UI/AlwaysOnTop",value);}
 	void setIntegrPlugin(IntegrPluginType value){settings.setValue("Options/IntegrPlugin",integrPluginTypeToString(value));}

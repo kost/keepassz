@@ -213,6 +213,7 @@
     <addaction name="separator"/>
     <addaction name="ViewHideUsernamesAction"/>
     <addaction name="ViewHidePasswordsAction"/>
+    <addaction name="ViewHideCommentsAction"/>
     <addaction name="separator"/>
     <addaction name="menuColumns"/>
     <addaction name="menuTool_Button_Sizes"/>
@@ -379,6 +380,14 @@
    </property>
    <property name="text">
     <string>Hide &amp;Passwords</string>
+   </property>
+  </action>
+  <action name="ViewHideCommentsAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hide &amp;Comments</string>
    </property>
   </action>
   <action name="ViewColumnsTitleAction">

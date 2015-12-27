@@ -294,6 +294,9 @@ QString KeepassEntryView::columnString(IEntryHandle* entry, int col, bool forceC
 		}
 		case 4:
 		{
+			if (config->hideComments() && !forceClearText) {
+				return "******";
+			}
 			QString comment = entry->comment();
 			int toPos = comment.indexOf(QRegExp("[\\r\\n]"));
 			if (toPos == -1)

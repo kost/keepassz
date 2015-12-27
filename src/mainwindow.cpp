@@ -180,6 +180,7 @@ void KeepassMainWindow::setupConnections(){
 	connect(ViewShowEntryDetailsAction,SIGNAL(toggled(bool)),this,SLOT(OnViewShowEntryDetails(bool)));
 	connect(ViewHidePasswordsAction,SIGNAL(toggled(bool)), this, SLOT(OnUsernPasswVisibilityChanged()));
 	connect(ViewHideUsernamesAction,SIGNAL(toggled(bool)), this, SLOT(OnUsernPasswVisibilityChanged()));
+	connect(ViewHideCommentsAction,SIGNAL(toggled(bool)), this, SLOT(OnUsernPasswVisibilityChanged()));
 
 	connect(menuColumns,SIGNAL(triggered(QAction*)),this,SLOT(OnColumnVisibilityChanged()));
 	connect(ViewToolButtonSize16Action,SIGNAL(toggled(bool)), this, SLOT(OnViewToolbarIconSize16(bool)));
@@ -318,6 +319,7 @@ void KeepassMainWindow::setupMenus(){
 	ViewShowEntryDetailsAction->setChecked(config->showEntryDetails());
 	ViewHidePasswordsAction->setChecked(config->hidePasswords());
 	ViewHideUsernamesAction->setChecked(config->hideUsernames());
+	ViewHideCommentsAction->setChecked(config->hideComments());
 	loadColumnVisibility();
 	ViewShowStatusbarAction->setChecked(config->showStatusbar());
 
@@ -745,7 +747,10 @@ void KeepassMainWindow::updateDetailView(){
 	templ.replace("%lastmod%", Qt::escape(entry->lastMod().toString(Qt::SystemLocaleDate)));
 	templ.replace("%lastaccess%", Qt::escape(entry->lastAccess().toString(Qt::SystemLocaleDate)));
 	templ.replace("%expire%", Qt::escape(entry->expire().toString(Qt::SystemLocaleDate)));
-	templ.replace("%comment%", Qt::escape(entry->comment()).replace("\n","<br/>"));
+	if (config->hideComments())
+		templ.replace("%comment%","****");
+	else
+		templ.replace("%comment%", Qt::escape(entry->comment()).replace("\n","<br/>"));
 	templ.replace("%attachment%", Qt::escape(entry->binaryDesc()));
 
 	if(entry->expire()!=Date_Never){
@@ -1064,6 +1069,7 @@ void KeepassMainWindow::OnColumnVisibilityChanged(){
 void KeepassMainWindow::OnUsernPasswVisibilityChanged(){
  	config->setHidePasswords(ViewHidePasswordsAction->isChecked());
  	config->setHideUsernames(ViewHideUsernamesAction->isChecked());
+	config->setHideComments(ViewHideCommentsAction->isChecked());
 	EntryView->refreshItems();
 }
 
