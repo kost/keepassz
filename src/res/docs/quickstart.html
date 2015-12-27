@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>KeePassX Quick-start Guide</title>
+</head>
+<body>
+	<a name="top" />
+	<h1>KeePassX Quick-start Guide</h1>
+	<p>
+		This guide helps you to manage your
+		passwords efficiently and securely with KeePassX.
+	</p>
+
+	<a name="startup" />
+	<h2>Starting up</h2>
+	<p>
+		After starting KeePassX for the first time, you
+		are presented with the main window with
+		no open database file. If you have used KeePassX
+		(or KeePass Classic on Windows) previously, you can
+		open your existing database. Otherwise we begin
+		with creating a new password database.
+	</p>
+	
+	<a name="database_create" />
+	<h2>Creating a new password database</h2>
+	<p>
+		KeePassX stores your password entries into
+		a password database file when the it's not running.
+		To create a new password database, click the 
+		<span class="gui">&quot;New Database&quot;</span>
+		icon on the program toolbar (it is the first icon from the 
+		left on the toolbar).
+	</p>
+	<p>
+		Second, you need to set the <b>master key</b> for the
+		password database. This key is used to encrypt (ie. lock)
+		the password database so it cannot be read by anybody
+		else but you. The master key can be a password
+		or a key file or both.
+		If you check both, you must provide both the password
+		and the key file to every time you want to unlock the database.
+	</p>
+	<p>
+		If you decide to use a password, 
+		<a href="http://www.us-cert.gov/cas/tips/ST04-002.html">
+		choose and protect it carefully</a> <img src="external.png" />.
+		The password should be strong, ie. long enough 
+		(at least 8 characters) and preferably contain lower and
+		uppercase characters, numbers and special characters (e.g. !#?).
+		You should also  memorize the password well, because
+		if you forget it, there is no way retrieving it later
+		from the locked database. You will be asked
+		to give the password twice to ensure that
+		there is no typing errors in the password.
+	</p>
+	<p>
+		The key file can be any file on your computer, e.g. a picture or 
+		a text document.
+		You can also create a randomly-generated key file by first
+		selecting the key file check box and clicking 
+		<span class="gui">&quot;Generate Key File...&quot;</span>.
+		You can store the key file for example on a USB memory stick,
+		to keep it with you everywhere.
+	</p>
+	
+	<a name="password_add" />
+	<h2>Adding password entries</h2>
+	<p>
+		After you have created or opened a database, you
+		can add password entries to the database.
+		A password entry essentially consists of a title,
+		user name and password. It may have other entries
+		as well, such as URL (Internet link) and comments.
+		To add a new password entry, select a group from 
+		the list on the left first, then
+		click the <span class="gui">
+		&quot;Add New Entry&quot;</span> icon on the program toolbar.
+	</p>
+	<p>
+		In the &quot;New Entry&quot; dialog you can enter
+		the information you want to into respective text boxes.
+		If you are creating a new account to e.g. a web forum,
+		you can use the password generator to generate strong
+		random passwords for you.
+	</p>
+
+	<a name="database_save" />
+	<h2>Saving the database</h2>
+	<p>
+		If you have added or edited entries in your database,
+		they are not automatically save to the database file by default.
+		You can save the database by clicking the <span class="gui">
+		&quot;Save Database&quot;</span> icon. 
+	</p>	
+	<p>
+		You may also want to
+		enable <span class="gui">&quot;Automatically save database
+		after every change&quot;</span> option from the
+		<span class="gui">&quot;Extras&quot;</span> &gt; 
+		<span class="gui">&quot;Settings...&quot;</span> &gt;
+		<span class="gui">&quot;General (2)&quot;</span> page. 
+		(On OS X, the page is found from 
+		<span class="gui">&quot;KeePassX&quot;</span> (Application menu) &gt; 
+		<span class="gui">&quot;Preferences&quot;</span>.)
+	</p>
+
+	<a name="database_open" />
+	<h2>Opening a database</h2>
+	<p>
+		By default, on next startup, KeePassX opens a 
+		<span class="gui">&quot;Enter Master Key&quot;</span>
+		dialog for the last used password database. If you wish
+		to open another password database, click 
+		<span class="gui">&quot;Cancel&quot;</span>
+		and click <span class="gui">&quot;Open Database&quot;</span> icon
+		on the program toolbar and select the wanted password 
+		database file from the file system. You can, of course,
+		do this at any point when the KeePassX main window is active.
+	</p>
+
+	<a name="password_edit" />
+	<h2>Editing and removing password entries</h2>
+	<p>
+		If you wish to edit a password entry, you can do
+		so by double-clicking on the entry title,
+		or by selecting the entry and then clicking the
+		<span class="gui">&quot;View/Edit Entry&quot;</span> icon
+		on the program toolbar.
+	</p>
+	<p>
+		To delete a password entry, first select the
+		entry and click <span class="gui">&quot;Delete Entry&quot;</span> icon
+		on the program toolbar or hit <tt>Ctrl-D</tt> (<tt>Cmd+D</tt> on OS X)
+		on the keyboard.
+	</p>
+
+	<a name="password_copy" />
+	<h2>Copying password (and user name) to the clipboard</h2>
+	<p>
+		You can copy the currently selected password by hitting <tt>Ctrl-C</tt> 
+		(<tt>Cmd-C</tt> on OS X) and user name with <tt>Ctrl-B</tt> (<tt>Cmd-B</tt> 
+		on OS X) on the keyboard. Then you can hit <tt>Ctrl-V</tt> 
+		(<tt>Cmd-V</tt> on OS X) to paste the password or username
+		to any program that supports pasting from the clipboard.
+	</p>
+
+	<a name="autotype" />
+	<h2>Setup Auto-Type (currently Linux only)</h2>
+	<p>
+		<b>Auto-Type</b> is a feature that allows you to e.g. log in
+		to web page by hitting only one key combination. 
+		KeePassX does the rest of the typing for you. Auto-Type reads
+		the title of currently active window on your screen
+		and matches it to the configured database entries.
+		If a matching window title is found from the password
+		database, it executes a predefined key sequence 
+		(by default your username, <tt>TAB</tt>, password, <tt>ENTER</tt>) in
+		the active window. This feature is currently available
+		in the Linux version only.
+	</p>
+	<p>
+		To enable Auto-Type, first go to 
+		<span class="gui">&quot;Extras&quot;</span> &gt;
+		<span class="gui">&quot;Settings...&quot;</span> &gt;
+		<span class="gui">&quot;Advanced&quot;</span> page
+		and set the <span class="gui">&quot;Global Auto-Type Shortcut&quot;</span>
+		by clicking the text box and typing the desired
+		keyboard shortcut (e.g. <tt>Ctrl-Shift-N</tt>). 
+		Click <span class="gui">&quot;OK&quot;</span> to exit the dialog.
+	</p>
+	<p>
+		Then, for example, open the web page where you 
+		want to be able to log in with Auto-Type. Let's
+		for example open Google.com into Firefox and
+		try to do automated search with Auto-Type. Go
+		to Google.com in Firefox and you'll notice
+		that your window title is now &quot;Google - Mozilla Firefox&quot;
+	</p>
+	<p>
+		Now, create new password entry, that
+		contains user name &quot;test&quot;.
+		Then, click the small <span class="gui">&quot;Tools&quot;</span>
+		button at the bottom of the <span class="gui">&quot;New Entry&quot;</span>
+		dialog, and select <span class="gui">&quot;Auto-Type: Select target window&quot;</span>
+		Select &quot;Google - Mozilla Firefox&quot; from the dropdown menu and
+		click <span class="gui">&quot;OK&quot;</span>. You should see now a new
+		line in the <span class="gui">&quot;Comment:&quot;</span> box, which reads:<br/><br/>
+		
+		<tt>Auto-Type-Window: Google - Mozilla Firefox</tt><br/><br/>
+		
+		Now you have associated that window title to this entry.
+	</p>
+	<p>
+		Finally, let's customize the Auto-Type key sequence
+		to just enter your username and hit <tt>ENTER</tt>.
+		Click again <span class="gui">&quot;Tools&quot;</span>
+		and select <span class="gui">&quot;Auto-Type: Customize Sequence&quot;</span>.
+		Now there's another new line in the <span class="gui">&quot;Comment:&quot;</span> box,
+		which reads:<br/><br/>
+		
+		<tt>Auto-Type: {USERNAME}{TAB}{PASSWORD}{ENTER}</tt><br/><br/>
+
+		Change this line to:<br/><br/>
+		
+		<tt>Auto-Type: {USERNAME}{ENTER}</tt><br/><br/>
+		
+		So that it would just type in your username and hit <tt>ENTER</tt>.
+		Click <span class="gui">&quot;OK&quot;</span> to save the entry.
+	</p>
+	<p>
+		Now, you can test the Auto-Type by returning to the
+		Firefox window and hitting the global Auto-Type keyboard
+		shortcut (e.g. <tt>Ctrl-Shift-N</tt>) in it.
+		If everything went correctly, KeePassX should now enter
+		&quot;test&quot; in the search box and start the search query
+		by hitting <tt>ENTER</tt>.
+	</p>
+	<p>
+		By modifing the Auto-Type key sequence you can tailor
+		Auto-Type to suit almost every web login page you'll enter.
+	</p>
+	
+<!--
+	<a name="" />
+	<h2></h2>
+	<p>
+	
+	</p>
+-->
+</body>	
+</html>

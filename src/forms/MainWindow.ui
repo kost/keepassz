@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Tarek Saidi</author>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>724</width>
+    <height>468</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>KeePassX</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout">
+    <item>
+     <widget class="QSplitter" name="VSplitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="KeepassGroupView" name="GroupView">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>30</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="showDropIndicator" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="dragEnabled">
+        <bool>false</bool>
+       </property>
+       <column>
+        <property name="text">
+         <string>Groups</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QSplitter" name="HSplitter">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>70</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="KeepassEntryView" name="EntryView">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>70</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="rootIsDecorated">
+         <bool>false</bool>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="DetailView">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>30</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="openLinks">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>724</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="HelpHandbookAction"/>
+    <addaction name="separator"/>
+    <addaction name="HelpAboutAction"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuExport">
+     <property name="title">
+      <string>&amp;Export to...</string>
+     </property>
+    </widget>
+    <widget class="QMenu" name="menuImport">
+     <property name="title">
+      <string>&amp;Import from...</string>
+     </property>
+    </widget>
+    <widget class="QMenu" name="menuBookmarks">
+     <property name="title">
+      <string>&amp;Bookmarks</string>
+     </property>
+    </widget>
+    <addaction name="FileNewAction"/>
+    <addaction name="FileOpenAction"/>
+    <addaction name="menuBookmarks"/>
+    <addaction name="FileCloseAction"/>
+    <addaction name="separator"/>
+    <addaction name="FileSaveAction"/>
+    <addaction name="FileSaveAsAction"/>
+    <addaction name="separator"/>
+    <addaction name="FileSettingsAction"/>
+    <addaction name="FileChangeKeyAction"/>
+    <addaction name="separator"/>
+    <addaction name="menuImport"/>
+    <addaction name="menuExport"/>
+    <addaction name="separator"/>
+    <addaction name="FileUnLockWorkspaceAction"/>
+    <addaction name="FileExitAction"/>
+   </widget>
+   <widget class="QMenu" name="menuEntries">
+    <property name="title">
+     <string>&amp;Entries</string>
+    </property>
+    <addaction name="EditNewEntryAction"/>
+    <addaction name="EditCloneEntryAction"/>
+    <addaction name="EditEditEntryAction"/>
+    <addaction name="EditDeleteEntryAction"/>
+    <addaction name="EditAutoTypeAction"/>
+    <addaction name="separator"/>
+    <addaction name="EditUsernameToClipboardAction"/>
+    <addaction name="EditPasswordToClipboardAction"/>
+    <addaction name="EditOpenUrlAction"/>
+    <addaction name="EditCopyUrlAction"/>
+    <addaction name="EditSaveAttachmentAction"/>
+    <addaction name="separator"/>
+    <addaction name="EditSearchAction"/>
+    <addaction name="EditGroupSearchAction"/>
+   </widget>
+   <widget class="QMenu" name="ViewMenu">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <widget class="QMenu" name="menuTool_Button_Sizes">
+     <property name="title">
+      <string>Toolbar &amp;Icon Size</string>
+     </property>
+     <addaction name="ViewToolButtonSize16Action"/>
+     <addaction name="ViewToolButtonSize22Action"/>
+     <addaction name="ViewToolButtonSize28Action"/>
+    </widget>
+    <widget class="QMenu" name="menuColumns">
+     <property name="title">
+      <string>&amp;Columns</string>
+     </property>
+     <addaction name="ViewColumnsGroupAction"/>
+     <addaction name="ViewColumnsTitleAction"/>
+     <addaction name="ViewColumnsUsernameAction"/>
+     <addaction name="ViewColumnsUrlAction"/>
+     <addaction name="ViewColumnsPasswordAction"/>
+     <addaction name="ViewColumnsCommentAction"/>
+     <addaction name="separator"/>
+     <addaction name="ViewColumnsExpireAction"/>
+     <addaction name="ViewColumnsCreationAction"/>
+     <addaction name="ViewColumnsLastChangeAction"/>
+     <addaction name="ViewColumnsLastAccessAction"/>
+     <addaction name="ViewColumnsAttachmentAction"/>
+    </widget>
+    <addaction name="ViewShowEntryDetailsAction"/>
+    <addaction name="ViewShowStatusbarAction"/>
+    <addaction name="separator"/>
+    <addaction name="ViewHideUsernamesAction"/>
+    <addaction name="ViewHidePasswordsAction"/>
+    <addaction name="separator"/>
+    <addaction name="menuColumns"/>
+    <addaction name="menuTool_Button_Sizes"/>
+   </widget>
+   <widget class="QMenu" name="menuExtras">
+    <property name="title">
+     <string>E&amp;xtras</string>
+    </property>
+    <addaction name="ExtrasPasswordGenAction"/>
+    <addaction name="ExtrasShowExpiredEntriesAction"/>
+    <addaction name="ExtrasTrashCanAction"/>
+    <addaction name="separator"/>
+    <addaction name="ExtrasSettingsAction"/>
+   </widget>
+   <widget class="QMenu" name="menuGroups">
+    <property name="title">
+     <string>&amp;Groups</string>
+    </property>
+    <addaction name="EditNewGroupAction"/>
+    <addaction name="EditNewSubgroupAction"/>
+    <addaction name="EditEditGroupAction"/>
+    <addaction name="EditDeleteGroupAction"/>
+    <addaction name="EditGroupSortAction"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEntries"/>
+   <addaction name="menuGroups"/>
+   <addaction name="ViewMenu"/>
+   <addaction name="menuExtras"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="ManageBookmarksAction">
+   <property name="text">
+    <string>&amp;Manage Bookmarks...</string>
+   </property>
+  </action>
+  <action name="FileOpenAction">
+   <property name="text">
+    <string>&amp;Open Database...</string>
+   </property>
+  </action>
+  <action name="FileCloseAction">
+   <property name="text">
+    <string>&amp;Close Database</string>
+   </property>
+  </action>
+  <action name="FileSaveAction">
+   <property name="text">
+    <string>&amp;Save Database</string>
+   </property>
+  </action>
+  <action name="FileSaveAsAction">
+   <property name="text">
+    <string>Save Database &amp;As...</string>
+   </property>
+  </action>
+  <action name="FileSettingsAction">
+   <property name="text">
+    <string>&amp;Database Settings...</string>
+   </property>
+  </action>
+  <action name="FileChangeKeyAction">
+   <property name="text">
+    <string>Change &amp;Master Key...</string>
+   </property>
+  </action>
+  <action name="FileUnLockWorkspaceAction">
+   <property name="text">
+    <string>&amp;Lock Workspace</string>
+   </property>
+  </action>
+  <action name="FileExitAction">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="EditNewSubgroupAction">
+   <property name="text">
+    <string>&amp;Add New Subgroup...</string>
+   </property>
+  </action>
+  <action name="EditEditGroupAction">
+   <property name="text">
+    <string>&amp;Edit Group...</string>
+   </property>
+  </action>
+  <action name="EditDeleteGroupAction">
+   <property name="text">
+    <string>&amp;Delete Group</string>
+   </property>
+  </action>
+  <action name="EditPasswordToClipboardAction">
+   <property name="text">
+    <string>Copy Password &amp;to Clipboard</string>
+   </property>
+  </action>
+  <action name="EditUsernameToClipboardAction">
+   <property name="text">
+    <string>Copy &amp;Username to Clipboard</string>
+   </property>
+  </action>
+  <action name="EditOpenUrlAction">
+   <property name="text">
+    <string>&amp;Open URL</string>
+   </property>
+  </action>
+  <action name="EditSaveAttachmentAction">
+   <property name="text">
+    <string>&amp;Save Attachment As...</string>
+   </property>
+  </action>
+  <action name="EditNewEntryAction">
+   <property name="text">
+    <string>Add &amp;New Entry...</string>
+   </property>
+  </action>
+  <action name="EditEditEntryAction">
+   <property name="text">
+    <string>&amp;View/Edit Entry...</string>
+   </property>
+  </action>
+  <action name="EditDeleteEntryAction">
+   <property name="text">
+    <string>De&amp;lete Entry</string>
+   </property>
+  </action>
+  <action name="EditCloneEntryAction">
+   <property name="text">
+    <string>&amp;Clone Entry</string>
+   </property>
+  </action>
+  <action name="EditSearchAction">
+   <property name="text">
+    <string>Search &amp;in Database...</string>
+   </property>
+  </action>
+  <action name="EditGroupSearchAction">
+   <property name="text">
+    <string>Search in this &amp;Group...</string>
+   </property>
+  </action>
+  <action name="ViewShowEntryDetailsAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show &amp;Entry Details</string>
+   </property>
+  </action>
+  <action name="ViewHideUsernamesAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hide &amp;Usernames</string>
+   </property>
+  </action>
+  <action name="ViewHidePasswordsAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hide &amp;Passwords</string>
+   </property>
+  </action>
+  <action name="ViewColumnsTitleAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Title</string>
+   </property>
+  </action>
+  <action name="ViewColumnsUsernameAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>User&amp;name</string>
+   </property>
+  </action>
+  <action name="ViewColumnsUrlAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;URL</string>
+   </property>
+  </action>
+  <action name="ViewColumnsPasswordAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Password</string>
+   </property>
+  </action>
+  <action name="ViewColumnsCommentAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Comment</string>
+   </property>
+  </action>
+  <action name="ViewColumnsExpireAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>E&amp;xpires</string>
+   </property>
+  </action>
+  <action name="ViewColumnsCreationAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>C&amp;reation</string>
+   </property>
+  </action>
+  <action name="ViewColumnsLastChangeAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Last Change</string>
+   </property>
+  </action>
+  <action name="ViewColumnsLastAccessAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Last &amp;Access</string>
+   </property>
+  </action>
+  <action name="ViewColumnsAttachmentAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>A&amp;ttachment</string>
+   </property>
+  </action>
+  <action name="ExtrasSettingsAction">
+   <property name="text">
+    <string>&amp;Settings...</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::PreferencesRole</enum>
+   </property>
+  </action>
+  <action name="HelpAboutAction">
+   <property name="text">
+    <string>&amp;About...</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="ViewShowStatusbarAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show &amp;Statusbar</string>
+   </property>
+  </action>
+  <action name="HelpHandbookAction">
+   <property name="text">
+    <string>&amp;KeePassX Handbook...</string>
+   </property>
+  </action>
+  <action name="HideSearchResultsAction">
+   <property name="text">
+    <string>Hide</string>
+   </property>
+  </action>
+  <action name="EditAutoTypeAction">
+   <property name="text">
+    <string>&amp;Perform AutoType</string>
+   </property>
+  </action>
+  <action name="ViewToolButtonSize16Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;16x16</string>
+   </property>
+  </action>
+  <action name="ViewToolButtonSize22Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;22x22</string>
+   </property>
+  </action>
+  <action name="ViewToolButtonSize28Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>2&amp;8x28</string>
+   </property>
+  </action>
+  <action name="FileNewAction">
+   <property name="text">
+    <string>&amp;New Database...</string>
+   </property>
+  </action>
+  <action name="ExtrasPasswordGenAction">
+   <property name="text">
+    <string>&amp;Password Generator...</string>
+   </property>
+  </action>
+  <action name="ViewColumnsGroupAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Group</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="ExtrasShowExpiredEntriesAction">
+   <property name="text">
+    <string>Show &amp;Expired Entries...</string>
+   </property>
+  </action>
+  <action name="ExtrasTrashCanAction">
+   <property name="text">
+    <string>Recycle Bin...</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="AddBookmarkAction">
+   <property name="text">
+    <string>&amp;Add Bookmark...</string>
+   </property>
+  </action>
+  <action name="AddThisAsBookmarkAction">
+   <property name="text">
+    <string>Bookmark &amp;this Database...</string>
+   </property>
+  </action>
+  <action name="EditCopyUrlAction">
+   <property name="text">
+    <string>Copy URL to Clipboard</string>
+   </property>
+  </action>
+  <action name="EditNewGroupAction">
+   <property name="text">
+    <string>Add New Group...</string>
+   </property>
+  </action>
+  <action name="EditGroupSortAction">
+   <property name="text">
+    <string>Sort groups</string>
+   </property>
+  </action>
+  <action name="ViewMinimizeAction">
+   <property name="text">
+    <string>&amp;Minimize Window</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KeepassEntryView</class>
+   <extends>QTreeWidget</extends>
+   <header>../../src/lib/EntryView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KeepassGroupView</class>
+   <extends>QTreeWidget</extends>
+   <header>../../src/lib/GroupView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,76 @@
+<ui version="4.0" >
+ <class>AutoTypeDlg</class>
+ <widget class="QWidget" name="AutoTypeDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>439</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>KeePassX - Auto-Type</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>1</width>
+       <height>50</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>Click on an entry to auto-type it.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="AutoTypeTreeWidget" name="entryList" >
+     <property name="mouseTracking" >
+      <bool>true</bool>
+     </property>
+     <property name="rootIsDecorated" >
+      <bool>false</bool>
+     </property>
+     <property name="itemsExpandable" >
+      <bool>false</bool>
+     </property>
+     <property name="allColumnsShowFocus" >
+      <bool>true</bool>
+     </property>
+     <property name="columnCount" >
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="ButtonBox" >
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AutoTypeTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>lib/AutoTypeTreeWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

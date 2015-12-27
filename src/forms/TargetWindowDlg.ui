@@ -1,0 +1,42 @@
+<ui version="4.0" >
+ <class>TargetWindowDlg</class>
+ <widget class="QDialog" name="TargetWindowDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>525</width>
+    <height>145</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Auto-Type: Select Target Window</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" >
+   <item>
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>To specify the target window, either select an existing currently-opened window
+from the drop-down list, or enter the window title manually:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboWindow" >
+     <property name="editable" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

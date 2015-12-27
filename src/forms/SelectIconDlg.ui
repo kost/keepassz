@@ -1,0 +1,64 @@
+<ui version="4.0" >
+ <class>SelectIconDlg</class>
+ <widget class="QDialog" name="SelectIconDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>478</width>
+    <height>284</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle" >
+   <string>Icon Selection</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QListWidget" name="List" >
+     <property name="iconSize" >
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="movement" >
+      <enum>QListView::Static</enum>
+     </property>
+     <property name="flow" >
+      <enum>QListView::LeftToRight</enum>
+     </property>
+     <property name="isWrapping" stdset="0" >
+      <bool>true</bool>
+     </property>
+     <property name="resizeMode" >
+      <enum>QListView::Fixed</enum>
+     </property>
+     <property name="gridSize" >
+      <size>
+       <width>32</width>
+       <height>44</height>
+      </size>
+     </property>
+     <property name="viewMode" >
+      <enum>QListView::IconMode</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="ButtonBox" >
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,227 @@
+----------------------------                                                                                                                                                                                                                           
+    0.4.4 (2015-12-08)
+----------------------------
+
+- Add hardening measures to prevent loading DLLs from the current working directory on Windows. (CVE-2015-8359)
+- Fix CVE-2015-8378: Canceling XML export operation creates export as ".xml"
+
+----------------------------
+    0.4.3 (2010-03-07)
+----------------------------
+
+- Fixed crash when editing groups (regression introduced in 0.4.2) (Bug #2964295)
+
+----------------------------
+    0.4.2 (2010-03-03)
+----------------------------
+
+- Re-added "Close to Tray" option
+- Use icon of parent group when creating a new entry (Bug #2494084)
+- Make database file saving transactional to avoid data loss
+- Fixed build errors with MSVC compiler (Bug #2926945), Qt 4.6 (Bug #2900850) and binutils gold linker
+- Switch focus to new entries (Bug #2899867, #2928843)
+- Added Cmd-M shortcut on Mac OS to minimize window (Bug #2827152)
+- Copy to clipboard even if field is empty (Bug #2889145)
+- Fixed possible database corruption when adding a new group while the Backup group exists (Bug #2897997)
+- Don't give up asking for the password after one decryption error when using the Twofish algorithm
+- Don't allow to drag'n'drop between databases to fix a crash (Bug #2961045)
+- Fixed: Closing KeePassX doesn't remove passwords from clipboard (Bug #2946601)
+- Fixed: Icons could be shown multiple times in Group dialog (Bug #2711510)
+- Fixed: Maximized state not saved when minimizing to tray [Windows] (Bug #2926367)
+- Better detection of the default directory to save the database
+- Added translations: Japanese, Portuguese, Serbian and Slovak and Ukrainian
+- Updated many translations
+
+----------------------------
+    0.4.1 (2009-09-14)
+----------------------------
+- Added initial documentation (by Jussi Sainio)
+- Added and improved many translations
+- Added ability to drag'n'drop fields (username, password, ...) to other applications [Linux]
+- Added option to show the application window always on top [Linux and Windows]
+- Seperate columns settings between normal and search results view
+- Interrupt auto-type if the focused window changed meanwhile
+- Reduced height of password generator dialog (Bug #2831504)
+- Fixed: "Key Stroke Delay" interpreted as seconds instead of ms (Bug #2716877)
+- Escape HTML chars in detail view (Bug #2836096)
+- Fixed: Mispelling of initialize in interface (Bug #2806402)
+- Fixed: Race condition on lock file (Bug #2801583)
+- Fixed: Modified entry does not refresh Entry Details Pane (Bug #2782262)
+- Fixed: Logoff doesn't close database correctly (Bug #2726197)
+- Fixed: Incorrect auto-type keymapping when KeePassX is in autostart
+- Fixed: Workspace is being locked after auto-type
+- Fixed: compiler warning/error "format not a string literal and no format arguments" (Bug #2815290)
+- Fixed: Makefile uninstall target removes system directories (Bug #2830345)
+- Fixed key rounds benchmark to return incorrect results
+- Set default auto-type key stroke delay to 5ms
+- Removed "Close to Tray" option
+
+----------------------------
+    0.4.0 (2009-03-25)
+----------------------------
+- Added pronounceable password generator
+- Added action "Copy URL to Clipboard"
+- Added "Tools" button to EditEntryDlg: Window List and Auto-Type sequence
+- Improved Auto-Typing: ability to type all unicode characters
+- Added option to save database after every change
+- Associate KeePassX with *.kdb files on Linux and Mac OS
+- Display warning when opening a database that is already opened
+- Distinguish between adding groups and subgroups (Bug #2194057)
+- Store list of preferred characters in password generator (Bug #2432748)
+- Implemented backup feature
+- Don't include entries from "Backup" group in search results
+- Added menu action to sort groups (Bug #2268672)
+- Clear Klipper history when clearing clipboard
+- Use serif font for all password fields (Bug #2594868)
+- Redesigned the Settings dialog and added ability to select language
+- Added Finnish, Gallican, Italian, Norwegian and Turkish translations
+- Cache and protect MasterKey - speeds up saving database
+- Added 2 new password generator options
+- Changed default config filename to "config.ini"
+- XDG compliant config location on Linux
+- Fixed: Crash on saving a database (Bug #1955677)
+- Fixed: Unnamed Database saved as ".kdb" (Bugs #2109972, #2118340)
+- Fixed: Date of Modification isn't updated (Bugs #2108658, #2121768)
+- Fixed: Cannot open DB from KeePassX 0.2.2 (Bug #2535569)
+- Fixed: Predefined expire times don't work (Bug #2109987)
+- Fixed: Sorting isn't consistent (Bug #2108655)
+- Fixed: KeepassX fails to lock itself after Ctrl-V (Bug #2106604)
+- Fixed: Position of main window not properly restored (Bugs #2090649, #2371738, #2336064)
+- Fixed: No password generated using list of very special characters (Bug #2230887)
+- Fixed: Crash if minimize to systray with locked workbench on Mac OS (Bug #2482531)
+- Fixed: Exports aren't sorted consistently (Bug #2108661)
+- Fixed: Sudden exit on bookmarking a new (not saved) file (Bug #2599802)
+- Fixed: -min parameter is sometimes ignored (Debian Bug #514414)
+- Fixed: Cloned entries are not immediately sorted
+- Fixed: Crash when moving entry to another group (Bug #2644545)
+- Fixed: Different qm files in different paths, no overruling (Bug #2657158)
+- Improved the initialization of the Windows RNG and fallback random number source (Bug #2091784)
+- Improved Mac OS bundle information (Bugs #2096992, #1921260)
+- Improve tab order in many dialogs (Bug #2130397)
+- Added nostrip qmake option
+
+----------------------------
+    0.3.4 (2008-11-09)
+----------------------------
+- fixed crash when auto-typing special characters (Bug #2111588)
+- only allow plain text in comment field
+
+----------------------------
+    0.3.3 (2008-08-11)
+----------------------------
+- fixed error when opening twofish encrypted databases (Bug #2025075)
+
+----------------------------
+    0.3.2 (2008-07-20)
+----------------------------
+- add default groups when creating a database
+- improved the auto-type dialog (keyboard only usage, visual selection feedback)
+- automatically try to unlock db when global auto-type key has been pressed
+- fixed password encoding problem (Bug #1687864)
+- fixed sorting of date columns (Bugs #1861726, #1922311)
+- fixed problem when restoring window after auto-type (Bug #1978861)
+- don't use entries in 'Backup' group for global auto-type (Bug #1915664)
+- hide contents of search field while database is locked (Bug #1923554)
+- fixed: custom entry icons are not saved (Bug #1995561)
+- added new icons introduced in KeePass 1.11
+- improved format of date strings (Bug #1932394)
+- added missing menu accelerators (Bug #1955304)
+- fixed: line breaks are ignored in Entry Detail View (Bug #1942362)
+- master key transformations (rounds) are now computed in two threads (from KeePass 1.11)
+- added ability to measure the number of rounds that can be calculated in 1 second
+- increase and randomize the default key transformation number
+- print help if parsing the arguments fails
+- disable precompiled header on FreeBSD by default to fix compilation error (Bug #1943446)
+
+---------------
+    0.3.1
+---------------
+- made key/password dialog more user friendly
+- added option for automatic database locking on inactivity
+- native file dialogs are used again under MacOS X and Windows
+- program accepts Qt command line switches like "-style" again
+- parameter "-cfg" now accepts relative paths (Bug #1825446)
+- fixed invalid entries in .desktop file (Bug #1906875)
+- fixed potential compilation problem in AES implementation (Bug #1905810)
+- fixed crash when re-arranging groups (Bug #1754998)
+- fixed size problems of some dialogs
+- files are not longer truncated when saving fails (Bug #1648616)
+- improved seeding of the random number generator
+
+---------------
+    0.3.0a
+---------------
+- fixed bug which prevented MacOS X bundle from starting (Bug #1906517)
+- fixed error message about missing license file when opening about dialog (Bug #1906696)
+
+---------------
+    0.3.0
+---------------
+- many bug fixes
+- global Auto-Type
+- fully customizable HTML based detail view
+- better structured settings dialog
+- secure random number generator based on 'Yarrow' including an optional entropy collector
+- new dialog to view expiered entries
+- calendar widget to edit expiration dates in a more confortable way
+- restructured password generator
+- much better appearance under MacOS X
+- fine tuning options for auto-type
+- system tray icon
+- workspace locking
+
+---------------
+    0.2.2
+---------------
+-fixed crash when parsing config file under Win32
+-fixed loss of entry icons when saving a database which was not created with KeePassX (no KPX_CUSTOM_ICONS metastream)
+-introduces new metastream format for custom icons
+-removed all old Qt3 support dependecies
+-QtNetwork and QtSql are not longer requiered (when using Qt 4.1.3 or later)
+-implemented correct UUID management for entries
+-added delay of 0.3s before performing auto-type
+-metastreams now get valid group IDs (KeePass/Win compatibility)
+-fixed drawing errors when performing drag and drop operations in group view
+-when there is no translation installed for the system's country preference but one for the same language the program will use it now
+-when canceling the file dialog for the opening of an existing database a already openend database will not longer be closed
+-same for the creation of a new database
+-alpha blending for banner icons
+-new standard banner icon
+-MacOS packages: all Qt libraries are now included in the application bundle (extra installation is not longer necessary)
+
+---------------
+    0.2.1
+---------------
+-added AutoType feature (experimental!)
+-added custom icons feature
+-new command line option for manual language selection (-lang <LOCALE-CODE>)
+-when saving an attachment the original filename is adopted by the file dialog
+-fixed strange sorting behavior of entries (Bug #7083)
+-sorting by dates now works as expected
+-the 'Expires' column and the detailed entry view now also show the string 'never' 
+ for entries which don't expire
+-entry view now gets updated after changing the column setup
+-added menu entry to change the size of the toolbar icons
+
+---------------
+    0.2.0
+---------------
+-ported whole application from Qt3 to Qt4
+(better performance, less memory usage, ready for KDE4)
+-improved Mac OS X support
+-added Drag&Drop support
+-multiple seclection mode for entries
+-improved loading performance for large databases
+-faster in-memory encryption
+-search field in toolbar now works
+-mainwindow size, splitter position and column sizes are restored at start-up
+-added option for alternating row colors
+-improved key/password dialog
+-removed language dialog - program now uses system's default language
+-loading translation files for Qt (e.g. file dialogs)
+-added text export function
+-added option "Never" for expire dates.
+-fixed problem with hex. key files
+-fixed problem with damaged file attachments after various entry operations
+-fixed segmentation fault when using new icons with higher index
+-fixed error when saving empty databases

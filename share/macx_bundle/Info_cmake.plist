@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- For a full list of properties, see
+	http://developer.apple.com/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/PListKeys.html
+	-->
+		
+	<key>CFBundleIconFile</key>
+	<string>${MACOSX_BUNDLE_ICON_FILE}</string>
+	
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	
+	<key>CFBundleGetInfoString</key>
+	<string>${MACOSX_BUNDLE_INFO_STRING}</string>
+	
+	<key>CFBundleSignature</key>
+	<string>kpsx</string>
+	
+	<key>CFBundleExecutable</key>
+	<string>${MACOSX_BUNDLE_EXECUTABLE_NAME}</string>
+	
+	<key>CFBundleVersion</key>
+	<string>${MACOSX_BUNDLE_BUNDLE_VERSION}</string>
+	
+	<key>CFBundleShortVersionString</key>
+	<string>${MACOSX_BUNDLE_SHORT_VERSION_STRING}</string>
+	
+	<key>CFBundleLongVersionString</key>
+	<string>${MACOSX_BUNDLE_LONG_VERSION_STRING}</string>
+	
+	<key>CFBundleName</key>
+	<string>KeePassX</string>
+	
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	
+	<key>CFBundleIdentifier</key>
+	<string>org.keepassx.KeePassX</string>
+	
+	<key>NSHumanReadableCopyright</key>
+	<string>© 2005-2009, KeePassX Development Team</string>
+	
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>kdb</string>
+			</array>
+			
+			<key>CFBundleTypeIconFile</key>
+			<string>icon</string>
+			
+			<key>CFBundleTypeName</key>
+			<string>KeePassX Password Database</string>
+			
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>kpsx</string>
+			</array>
+			
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+	</array>
+	
+</dict>
+</plist>

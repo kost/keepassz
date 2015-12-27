@@ -1,0 +1,342 @@
+<ui version="4.0" >
+ <class>CustomizeDetailViewDialog</class>
+ <widget class="QDialog" name="CustomizeDetailViewDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>531</width>
+    <height>402</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="TabWidget" >
+     <property name="currentIndex" >
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>509</width>
+        <height>324</height>
+       </rect>
+      </property>
+      <attribute name="title" >
+       <string>Rich Text Editor</string>
+      </attribute>
+      <layout class="QVBoxLayout" >
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QToolButton" name="BtnBold" >
+           <property name="toolTip" >
+            <string>Bold</string>
+           </property>
+           <property name="text" >
+            <string>B</string>
+           </property>
+           <property name="iconSize" >
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="checkable" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="BtnItalic" >
+           <property name="toolTip" >
+            <string>Italic</string>
+           </property>
+           <property name="text" >
+            <string>I</string>
+           </property>
+           <property name="checkable" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="BtnUnderline" >
+           <property name="toolTip" >
+            <string>Underlined</string>
+           </property>
+           <property name="text" >
+            <string>U</string>
+           </property>
+           <property name="checkable" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="BtnAlignLeft" >
+           <property name="toolTip" >
+            <string>Left-Aligned</string>
+           </property>
+           <property name="text" >
+            <string>L</string>
+           </property>
+           <property name="checkable" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="BtnAlignCenter" >
+           <property name="toolTip" >
+            <string>Centered</string>
+           </property>
+           <property name="text" >
+            <string>C</string>
+           </property>
+           <property name="checkable" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="BtnAlignRight" >
+           <property name="toolTip" >
+            <string>Right-Aligned</string>
+           </property>
+           <property name="text" >
+            <string>R</string>
+           </property>
+           <property name="checkable" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="BtnAlignBlock" >
+           <property name="toolTip" >
+            <string>Justified</string>
+           </property>
+           <property name="text" >
+            <string>B</string>
+           </property>
+           <property name="checkable" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="BtnColor" >
+           <property name="toolTip" >
+            <string>Text Color</string>
+           </property>
+           <property name="text" >
+            <string>C</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="FontSize" >
+           <property name="toolTip" >
+            <string>Font Size</string>
+           </property>
+           <property name="editable" >
+            <bool>true</bool>
+           </property>
+           <item>
+            <property name="text" >
+             <string>6</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>7</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>8</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>9</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>11</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>12</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>14</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>16</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>18</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>20</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>22</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>24</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>26</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>28</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>36</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>42</string>
+            </property>
+           </item>
+           <item>
+            <property name="text" >
+             <string>78</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="BtnTemplates" >
+           <property name="toolTip" >
+            <string>Templates</string>
+           </property>
+           <property name="text" >
+            <string>T</string>
+           </property>
+           <property name="popupMode" >
+            <enum>QToolButton::InstantPopup</enum>
+           </property>
+           <property name="arrowType" >
+            <enum>Qt::NoArrow</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0" >
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="RichEdit" />
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>509</width>
+        <height>324</height>
+       </rect>
+      </property>
+      <attribute name="title" >
+       <string>HTML</string>
+      </attribute>
+      <layout class="QVBoxLayout" >
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QTextEdit" name="HtmlEdit" >
+         <property name="acceptRichText" >
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="ButtonBox" >
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok|QDialogButtonBox::RestoreDefaults</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>TabWidget</tabstop>
+  <tabstop>BtnBold</tabstop>
+  <tabstop>BtnItalic</tabstop>
+  <tabstop>BtnUnderline</tabstop>
+  <tabstop>BtnAlignLeft</tabstop>
+  <tabstop>BtnAlignCenter</tabstop>
+  <tabstop>BtnAlignRight</tabstop>
+  <tabstop>BtnAlignBlock</tabstop>
+  <tabstop>BtnColor</tabstop>
+  <tabstop>FontSize</tabstop>
+  <tabstop>BtnTemplates</tabstop>
+  <tabstop>RichEdit</tabstop>
+  <tabstop>HtmlEdit</tabstop>
+  <tabstop>ButtonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

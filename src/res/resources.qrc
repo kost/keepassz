@@ -1,0 +1,12 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+  <file>default-detailview.html</file>
+  <file>docs/faq.html</file>
+  <file>docs/features.html</file>
+  <file>docs/index.html</file>
+  <file>docs/installation.html</file>
+  <file>docs/quickstart.html</file>
+  <file>docs/systemreq.html</file>
+  <file>docs/external.png</file>
+</qresource>
+</RCC>

@@ -1,0 +1,194 @@
+<ui version="4.0" >
+ <class>Search_Dlg</class>
+ <widget class="QDialog" name="Search_Dlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>458</width>
+    <height>306</height>
+   </rect>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>390</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>Search...</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>50</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QGridLayout" >
+     <property name="spacing" >
+      <number>4</number>
+     </property>
+     <item row="1" column="0" >
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType" >
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="0" colspan="2" >
+      <widget class="QGroupBox" name="groupBox1" >
+       <property name="title" >
+        <string>Include:</string>
+       </property>
+       <layout class="QGridLayout" >
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item row="0" column="1" >
+         <widget class="QCheckBox" name="checkBox_Password" >
+          <property name="text" >
+           <string>Pass&amp;words</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" >
+         <widget class="QCheckBox" name="checkBox_Attachment" >
+          <property name="text" >
+           <string>A&amp;nhang</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" >
+         <widget class="QCheckBox" name="checkBox_URL" >
+          <property name="text" >
+           <string>U&amp;RLs</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QCheckBox" name="checkBox_Comment" >
+          <property name="text" >
+           <string>C&amp;omments</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QCheckBox" name="checkBox_Username" >
+          <property name="text" >
+           <string>&amp;Usernames</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" >
+         <widget class="QCheckBox" name="checkBox_Title" >
+          <property name="text" >
+           <string>&amp;Titles</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="1" >
+      <layout class="QVBoxLayout" >
+       <property name="spacing" >
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QCheckBox" name="checkBox_Cs" >
+         <property name="text" >
+          <string>&amp;Case Sensitive</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_regExp" >
+         <property name="text" >
+          <string>Regular E&amp;xpression</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_Recursive" >
+         <property name="text" >
+          <string>Include Subgroups (recursive)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1" >
+      <widget class="QLineEdit" name="Edit_Search" />
+     </item>
+     <item row="0" column="0" >
+      <widget class="QLabel" name="textLabel1" >
+       <property name="text" >
+        <string>Search For:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="ButtonBox" >
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <tabstops>
+  <tabstop>Edit_Search</tabstop>
+  <tabstop>checkBox_Cs</tabstop>
+  <tabstop>checkBox_regExp</tabstop>
+  <tabstop>checkBox_Recursive</tabstop>
+  <tabstop>checkBox_Title</tabstop>
+  <tabstop>checkBox_Username</tabstop>
+  <tabstop>checkBox_Password</tabstop>
+  <tabstop>checkBox_Comment</tabstop>
+  <tabstop>checkBox_URL</tabstop>
+  <tabstop>checkBox_Attachment</tabstop>
+  <tabstop>ButtonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
