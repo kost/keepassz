@@ -37,6 +37,7 @@ class CEditEntryDlg : public QDialog, private Ui_EditEntryDialog
 		IDatabase* db;
 		bool ModFlag;
 		int GroupIndex;
+		QString commentesc;
 		QList<IGroupHandle*> groups;
 		QPixmap BannerPixmap;	
 	

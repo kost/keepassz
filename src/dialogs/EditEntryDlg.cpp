@@ -42,6 +42,8 @@ CEditEntryDlg::CEditEntryDlg(IDatabase* _db, IEntryHandle* _entry,QWidget* paren
 	
 	setGeometry( config->dialogGeometry(this) );
 
+	commentesc="***";
+
 	connect(Edit_Title, SIGNAL(textChanged(const QString&)), this, SLOT( OnTitleTextChanged(const QString&)));
 	connect(Edit_Password_w, SIGNAL(editingFinished()), this, SLOT(OnPasswordwLostFocus()));
 	connect(Edit_Password_w, SIGNAL(textChanged(const QString&)), this, SLOT( OnPasswordwTextChanged()));
@@ -107,7 +109,11 @@ CEditEntryDlg::CEditEntryDlg(IDatabase* _db, IEntryHandle* _entry,QWidget* paren
 		bits=128;
 	Progress_Quali->setValue(100*bits/128);
 	Edit_Attachment->setText(entry->binaryDesc());
-	Edit_Comment->setPlainText(entry->comment());
+	if (config->hideComments()) {
+		Edit_Comment->setPlainText(commentesc);
+	} else {
+		Edit_Comment->setPlainText(entry->comment());
+	}
 	InitGroupComboBox();
 
 	if(!entry->binarySize()){
@@ -191,7 +197,8 @@ void CEditEntryDlg::OnButtonOK()
 	if(entry->url()!=Edit_URL->text())
 		ModFlag=true;
 	if(entry->comment()!=Edit_Comment->toPlainText())
-		ModFlag=true;
+		if (!(config->hideComments() && Edit_Comment->toPlainText()!=commentesc))
+			ModFlag=true;
 	SecString pw=entry->password();
 	pw.unlock();
 	QString password=pw.string();
@@ -214,7 +221,8 @@ void CEditEntryDlg::OnButtonOK()
 		QString password=Edit_Password->text();
 		pw.setString(password,true);
 		entry->setPassword(pw);
-		entry->setComment(Edit_Comment->toPlainText());
+		if (!(config->hideComments() && Edit_Comment->toPlainText()!=commentesc)) 
+			entry->setComment(Edit_Comment->toPlainText());
 		entry->setImage(IconIndex);
 	}
 	if(Combo_Group->currentIndex()!=GroupIndex){
