@@ -13,7 +13,7 @@ In order to build you need to satisfy requirements.
 
 You need QT4 for building. On Debian/Ubuntu, install following packages:
 
-```apt-get install libqt4-dev```
+```apt-get install libqt4-dev cmake```
 
 ### Building
 
