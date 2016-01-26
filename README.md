@@ -1,6 +1,8 @@
 # keepassz
 Keepassz is improved Keepassx 0.x/1.x
 
+It is based on latest 0.4.4 source of keepassx.
+
 ## Features
 
 Modified to build with newer compilers and also added option to hide comments.
