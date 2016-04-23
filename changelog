@@ -1,4 +1,12 @@
 ----------------------------                                                                                                                                                                                                                           
+    0.4.5 (2016-04-23)
+----------------------------
+
+- Make it work with modern compilers
+- Option to hide comments
+- Check if systray is available before using it
+- rename keepassx to keepassz in order to avoid conflicts
+
     0.4.4 (2015-12-08)
 ----------------------------
 

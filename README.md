@@ -5,7 +5,11 @@ It is based on latest 0.4.4 source of keepassx.
 
 ## Features
 
-Modified to build with newer compilers and also added option to hide comments.
+- Modified to build with newer compilers 
+
+- added option to hide comments
+
+- Renamed to keepassz in order to avoid conflicts
 
 ## Building
 
