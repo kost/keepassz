@@ -249,7 +249,7 @@ HEADERS += main.h \
 #           dialogs/TrashCanDlg.h \
            import/Import.h \
 #           import/Import_GnuKeyRing.h \
-           import/Import_keepassz_Xml.h \
+           import/Import_KeePassX_Xml.h \
            import/Import_KWalletXml.h \
            import/Import_PwManager.h \
            export/Export.h \
@@ -308,11 +308,11 @@ SOURCES += main.cpp \
 #           dialogs/TrashCanDlg.cpp \
            import/Import.cpp \
 #           import/Import_GnuKeyRing.cpp \
-           import/Import_keepassz_Xml.cpp \
+           import/Import_KeePassX_Xml.cpp \
            import/Import_KWalletXml.cpp \
            import/Import_PwManager.cpp \
            export/Export.cpp \
-           export/Export_keepassz_Xml.cpp \
+           export/Export_KeePassX_Xml.cpp \
            export/Export_Txt.cpp
 
 isEqual(PRECOMPILED,0) {
