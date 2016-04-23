@@ -35,6 +35,8 @@
 #	define DEFAULT_MOUNT_DIR QString()
 #endif
 
+#include <QSystemTrayIcon>
+
 class KpxConfig{
 public:
 	friend class KpxBookmarks;
@@ -99,7 +101,11 @@ public:
 	bool lockOnInactivity(){return settings.value("Options/LockOnInactivity",false).toBool();}
 	int lockAfterSec(){return settings.value("Options/LockAfterSec",30).toInt();}
 	bool showStatusbar(){return settings.value("UI/ShowStatusbar",true).toBool();}
-	bool showSysTrayIcon(){return settings.value("Options/ShowSysTrayIcon",false).toBool();}
+	bool showSysTrayIcon(){
+		return QSystemTrayIcon::isSystemTrayAvailable() &&
+		qgetenv("XDG_CURRENT_DESKTOP") != "Unity" &&
+		settings.value("Options/ShowSysTrayIcon",false).toBool();
+	}
 	bool showToolbar(){return settings.value("UI/ShowToolbar",true).toBool();}
 	int toolbarIconSize(){return settings.value("UI/ToolbarIconSize",16).toInt();}
 	QString urlCmd(){return settings.value("Options/UrlCmd").toString();}

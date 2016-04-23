@@ -79,6 +79,10 @@ CSettingsDlg::CSettingsDlg(QWidget* parent):QDialog(parent,Qt::Dialog)
 	connect(this,SIGNAL(rejected()),SLOT(resetGlobalShortcut()));
 #endif
 	
+	if (!QSystemTrayIcon::isSystemTrayAvailable() || qgetenv("XDG_CURRENT_DESKTOP") == "Unity") {
+		CheckBox_ShowSysTrayIcon->setEnabled(false);
+	}
+	
 	listWidget->setCurrentRow(0);
 
 	//General (1)
