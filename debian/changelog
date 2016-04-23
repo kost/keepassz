@@ -1,0 +1,16 @@
+keepassz (0.4.5-0.1ubuntu1) xenial; urgency=low
+
+  * Release of keepassz
+
+ -- Vlatko Kosturjak <kost@linux.hr>  Sat, 23 Apr 2016 19:30:35 -0600
+
+keepassz (0.4.3+dfsg-0.1ubuntu1.14.04.1) trusty-security; urgency=medium
+
+  * SECURITY UPDATE: private information disclosure via cancelled XML export
+    operation
+    - debian/patches/CVE-2015-8378.patch: Properly detect when a user selects
+      'cancel' in the file dialog. Based on Debian patch.
+    - CVE-2015-8378
+
+ -- Tyler Hicks <tyhicks@canonical.com>  Fri, 04 Dec 2015 09:30:35 -0600
+
