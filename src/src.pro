@@ -253,7 +253,7 @@ HEADERS += main.h \
            import/Import_KWalletXml.h \
            import/Import_PwManager.h \
            export/Export.h \
-           export/Export_keepassz_Xml.h \
+           export/Export_KeePassX_Xml.h \
            export/Export_Txt.h \
            plugins/interfaces/IFileDialog.h \
            plugins/interfaces/IIconTheme.h \
