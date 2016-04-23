@@ -11,6 +11,26 @@ It is based on latest 0.4.4 source of keepassx.
 
 - Renamed to keepassz in order to avoid conflicts
 
+## Installing
+
+Installing depends on platform and distribution.
+
+### Ubuntu (LTS) from PPA
+
+It is standard PPA way:
+
+```
+sudo add-apt-repository ppa:kost/ppa
+sudo apt-get update
+sudo apt-get install keepassz
+```
+
+### From source
+
+You have basically two ways. Download release or git clone current master. 
+Check out building section for building and installing instructions.
+You just need to say ```make install``` on the end in order to install binaries on the system.
+
 ## Building
 
 In order to build you need to satisfy requirements.
