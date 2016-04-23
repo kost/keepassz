@@ -1,13 +1,13 @@
 # CMake is still experimental, use qmake instead
 
-INSTALL(DIRECTORY keepassx/i18n keepassx/icons
+INSTALL(DIRECTORY keepassz/i18n keepassz/icons
 	DESTINATION ${SHAREDIR}
 	PATTERN *.qm EXCLUDE
 	PATTERN *~ EXCLUDE
 	PATTERN .svn EXCLUDE
 )
 
-INSTALL(FILES keepassx/license.html DESTINATION ${SHAREDIR})
+INSTALL(FILES keepassz/license.html DESTINATION ${SHAREDIR})
 
 IF (NOT MINGW AND NOT APPLE)
 	INSTALL(DIRECTORY applications

@@ -16,13 +16,13 @@
     <string>APPL</string>
 
     <key>CFBundleGetInfoString</key>
-    <string>KeePassX 0.4.4</string>
+    <string>KeePassZ 0.4.4</string>
 
     <key>CFBundleSignature</key>
     <string>kpsx</string>
 
     <key>CFBundleExecutable</key>
-    <string>KeePassX</string>
+    <string>KeePassZ</string>
 
     <key>CFBundleVersion</key>
     <string>0.4.4</string>
@@ -31,7 +31,7 @@
     <string>0.4.4</string>
 
     <key>CFBundleName</key>
-    <string>KeePassX</string>
+    <string>KeePassZ</string>
 
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
@@ -49,10 +49,10 @@
         <key>CFBundleTypeIconFile</key>
         <string>icon</string>
         <key>CFBundleTypeName</key>
-        <string>KeePassX Password Database</string>
+        <string>KeePassZ Password Database</string>
         <key>CFBundleTypeOSTypes</key>
            <array>
-             <string>kpsx</string>
+             <string>kpsz</string>
            </array>
         <key>CFBundleTypeRole</key>
         <string>Editor</string>

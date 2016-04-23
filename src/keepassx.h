@@ -22,8 +22,8 @@
 
 // global defines
 
-#define APP_DISPLAY_NAME    "KeePassX"
-#define APP_CODE_NAME       "keepassx"
+#define APP_DISPLAY_NAME    "KeePassZ"
+#define APP_CODE_NAME       "keepassz"
 #define APP_SHORT_FUNC      "Password Manager"
 #define APP_LONG_FUNC       "Cross Platform Password Manager"
 #define APP_VERSION         "0.4.4"

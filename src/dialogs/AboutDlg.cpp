@@ -38,9 +38,12 @@ AboutDialog::AboutDialog(QWidget* parent):QDialog(parent)
 		}
 		AboutTr+="<br>";
 	}
-	Edit_Translation->setHtml(AboutTr+tr("Information on how to translate KeePassX can be found under:")
-		+"<br>http://www.keepassx.org/");
+	Edit_Translation->setHtml(AboutTr+tr("Information on how to translate KeePassZ can be found under:")
+		+"<br>https://github.com/kost/keepassz");
 	QString str;
+	str+="<b>"+tr("Keepassz team")+"</b><br>";
+	str+="<u>Vlatko Kosturjak</u><br>"+tr("Developer, Project Admin")+"<br>https://github.com/kost/<br>";
+	str+="<br>";
 	str+="<b>"+tr("Team")+"</b><br>";
 	str+="<div style='margin-left:10px;'>";
 	str+="<u>Tarek Saidi</u><br>"+tr("Developer, Project Admin")+"<br>tarek_saidi@users.sf.net<br>";

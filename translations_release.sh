@@ -14,9 +14,9 @@ if [ "$LRELEASE" = "" ] ; then
 fi
 
 cd `dirname $0`
-rm share/keepassx/i18n/*.qm
+rm share/keepassz/i18n/*.qm
 cd src
 $LRELEASE translations/*.ts
-mv translations/*.qm ../share/keepassx/i18n
-rm ../share/keepassx/i18n/keepassx-xx_XX.qm
-rm ../share/keepassx/i18n/keepassx-cs_CZ.qm
+mv translations/*.qm ../share/keepassz/i18n
+rm ../share/keepassz/i18n/keepassz-xx_XX.qm
+rm ../share/keepassz/i18n/keepassz-cs_CZ.qm
