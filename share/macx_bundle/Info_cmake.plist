@@ -31,16 +31,16 @@
 	<string>${MACOSX_BUNDLE_LONG_VERSION_STRING}</string>
 	
 	<key>CFBundleName</key>
-	<string>KeePassX</string>
+	<string>KeePassZ</string>
 	
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	
 	<key>CFBundleIdentifier</key>
-	<string>org.keepassx.KeePassX</string>
+	<string>org.keePassZ.KeePassZ</string>
 	
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2005-2009, KeePassX Development Team</string>
+	<string>© 2005-2009, KeePassZ Development Team</string>
 	
 	<key>CFBundleDocumentTypes</key>
 	<array>
@@ -54,11 +54,11 @@
 			<string>icon</string>
 			
 			<key>CFBundleTypeName</key>
-			<string>KeePassX Password Database</string>
+			<string>KeePassZ Password Database</string>
 			
 			<key>CFBundleTypeOSTypes</key>
 			<array>
-				<string>kpsx</string>
+				<string>kpsz</string>
 			</array>
 			
 			<key>CFBundleTypeRole</key>

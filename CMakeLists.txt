@@ -1,42 +1,42 @@
 # CMake is still experimental, use qmake instead
 
-PROJECT(KeePassX)
+PROJECT(keepassz)
 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6.0 FATAL_ERROR)
 
 MESSAGE("CMake is still experimental, use qmake instead")
 
-SET( keepassx_VERSION_SHORT "0.4.0" )
-SET( keepassx_VERSION "0.4.0" )
+SET( keepassz_VERSION_SHORT "0.4.0" )
+SET( keepassz_VERSION "0.4.0" )
 
-ADD_DEFINITIONS(-D'KEEPASSX_VERSION="${keepassx_VERSION}"')
+ADD_DEFINITIONS(-D'keepassz_VERSION="${keepassz_VERSION}"')
 
 #Set the custom CMake module directory where our include/lib finders are
 SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 IF( APPLE OR MINGW )
-	SET( PROGNAME KeePassX )
+	SET( PROGNAME keepassz )
 ELSE( APPLE OR MINGW )
-	SET( PROGNAME keepassx )
+	SET( PROGNAME keepassz )
 ENDIF( APPLE OR MINGW )
 
 IF( APPLE )
 	SET( MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/share/macx_bundle/Info_cmake.plist )
 	SET( MACOSX_BUNDLE_ICON_FILE ${CMAKE_CURRENT_SOURCE_DIR}/share/macx_bundle/icon.icns )
-	SET( MACOSX_BUNDLE_INFO_STRING KeePassX v${keepassx_VERSION} )
-	SET( MACOSX_BUNDLE_VERSION ${keepassx_VERSION} )
-	SET( MACOSX_BUNDLE_SHORT_VERSION_STRING ${keepassx_VERSION_SHORT} )
-	SET( MACOSX_BUNDLE_LONG_VERSION_STRING Version ${keepassx_VERSION} )
+	SET( MACOSX_BUNDLE_INFO_STRING keepassz v${keepassz_VERSION} )
+	SET( MACOSX_BUNDLE_VERSION ${keepassz_VERSION} )
+	SET( MACOSX_BUNDLE_SHORT_VERSION_STRING ${keepassz_VERSION_SHORT} )
+	SET( MACOSX_BUNDLE_LONG_VERSION_STRING Version ${keepassz_VERSION} )
 	SET( CMAKE_OSX_ARCHITECTURES ppc;i386 )
 ENDIF( APPLE )
 
 IF( MINGW )
 	FIND_PROGRAM(CMAKE_RC NAMES ${_CMAKE_TOOLCHAIN_PREFIX}windres HINTS ${_CMAKE_TOOLCHAIN_LOCATION})
 	
-	ADD_CUSTOM_COMMAND( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/keepassx.o
+	ADD_CUSTOM_COMMAND( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/keepassz.o
 		COMMAND ${CMAKE_RC} -I${CMAKE_CURRENT_SOURCE_DIR}
-		-i${CMAKE_CURRENT_SOURCE_DIR}/share/win_ico/keepassx.rc -o ${CMAKE_CURRENT_BINARY_DIR}/keepassx.o )
-	SET(keepassx_RCS ${CMAKE_CURRENT_BINARY_DIR}/keepassx.o)
+		-i${CMAKE_CURRENT_SOURCE_DIR}/share/win_ico/keepassz.rc -o ${CMAKE_CURRENT_BINARY_DIR}/keepassz.o )
+	SET(keepassz_RCS ${CMAKE_CURRENT_BINARY_DIR}/keepassz.o)
 ENDIF( MINGW )
 
 
@@ -87,7 +87,7 @@ ELSEIF( APPLE )
 	SET(SHAREDIR "Contents/Resources")
 ELSE( MINGW )
 	SET(BINDIR "bin")
-	SET(SHAREDIR "share/keepassx")
+	SET(SHAREDIR "share/keepassz")
 	SET(SHAREDIR_APP "share")
 ENDIF( MINGW )
 

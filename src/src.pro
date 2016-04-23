@@ -42,14 +42,14 @@ unix : !macx : !isEqual(QMAKE_WIN32,1){
 			DEFINES += GLOBAL_AUTOTYPE
 		}
 	}
-	TARGET = ../bin/keepassx
+	TARGET = ../bin/keepassz
 	target.path = $${PREFIX}/bin
-	datai18n.files = ../share/keepassx/i18n/*.qm
-	datai18n.path = $${PREFIX}/share/keepassx/i18n
-	dataicons.files = ../share/keepassx/icons/*.png
-	dataicons.path = $${PREFIX}/share/keepassx/icons
-	datalicense.files = ../share/keepassx/license.html
-	datalicense.path = $${PREFIX}/share/keepassx
+	datai18n.files = ../share/keepassz/i18n/*.qm
+	datai18n.path = $${PREFIX}/share/keepassz/i18n
+	dataicons.files = ../share/keepassz/icons/*.png
+	dataicons.path = $${PREFIX}/share/keepassz/icons
+	datalicense.files = ../share/keepassz/license.html
+	datalicense.path = $${PREFIX}/share/keepassz
 	
 	shareapp.files = ../share/applications/*.desktop
 	shareapp.path = $${PREFIX}/share/applications
@@ -80,9 +80,9 @@ unix : !macx : !isEqual(QMAKE_WIN32,1){
 #-------------------------------------------------------------------------------
 macx {
 	isEmpty(PREFIX): PREFIX = /Applications
-	TARGET = ../bin/KeePassX
+	TARGET = ../bin/keepassz
 	target.path = $${PREFIX}
-	data.files += ../share/keepassx
+	data.files += ../share/keepassz
 	data.path = Contents/Resources
 	INSTALLS += data
 	LIBS += -framework CoreFoundation
@@ -114,10 +114,10 @@ macx {
 #-------------------------------------------------------------------------------
 isEqual(QMAKE_WIN32,1){
 	CONFIG += windows
-	isEmpty(PREFIX): PREFIX = "C:/Program\ files/KeePassX"
-	TARGET = ../bin/KeePassX
+	isEmpty(PREFIX): PREFIX = "C:/Program\ files/keepassz"
+	TARGET = ../bin/keepassz
 	target.path = $${PREFIX}
-	data.files += ../share/keepassx/*
+	data.files += ../share/keepassz/*
 	data.path = $${PREFIX}/share
 	INSTALLS += data
 	win32-msvc*: LIBS += advapi32.lib
@@ -126,7 +126,7 @@ isEqual(QMAKE_WIN32,1){
 		qt_libs.path = $${PREFIX}
 		INSTALLS += qt_libs
 	}
-	RC_FILE = ../share/win_ico/keepassx.rc
+	RC_FILE = ../share/win_ico/keepassz.rc
 	QMAKE_LINK_OBJECT_SCRIPT = $${OBJECTS_DIR}/$${QMAKE_LINK_OBJECT_SCRIPT}
 #	SOURCES += main_win32.cpp
 }
@@ -160,27 +160,27 @@ FORMS += forms/AboutDlg.ui \
 #         forms/TrashCanDlg.ui \
          forms/WorkspaceLockedWidget.ui
 
-TRANSLATIONS_KX = translations/keepassx-de_DE.ts \
-                  translations/keepassx-es_ES.ts \
-                  translations/keepassx-fi_FI.ts \
-                  translations/keepassx-fr_FR.ts \
-                  translations/keepassx-gl_ES.ts \
-                  translations/keepassx-hu_HU.ts \
-                  translations/keepassx-it_IT.ts \
-                  translations/keepassx-ja_JP.ts \
-                  translations/keepassx-nb_NO.ts \
-                  translations/keepassx-nl_NL.ts \
-                  translations/keepassx-pl_PL.ts \
-                  translations/keepassx-pt_PT.ts \
-                  translations/keepassx-ru_RU.ts \
-                  translations/keepassx-sk_SK.ts \
-                  translations/keepassx-sr_RS.ts \
-                  translations/keepassx-tr_TR.ts \
-                  translations/keepassx-uk_UA.ts \
-                  translations/keepassx-zh_CN.ts
+TRANSLATIONS_KX = translations/keepassz-de_DE.ts \
+                  translations/keepassz-es_ES.ts \
+                  translations/keepassz-fi_FI.ts \
+                  translations/keepassz-fr_FR.ts \
+                  translations/keepassz-gl_ES.ts \
+                  translations/keepassz-hu_HU.ts \
+                  translations/keepassz-it_IT.ts \
+                  translations/keepassz-ja_JP.ts \
+                  translations/keepassz-nb_NO.ts \
+                  translations/keepassz-nl_NL.ts \
+                  translations/keepassz-pl_PL.ts \
+                  translations/keepassz-pt_PT.ts \
+                  translations/keepassz-ru_RU.ts \
+                  translations/keepassz-sk_SK.ts \
+                  translations/keepassz-sr_RS.ts \
+                  translations/keepassz-tr_TR.ts \
+                  translations/keepassz-uk_UA.ts \
+                  translations/keepassz-zh_CN.ts
 
 # also update in translations_release.sh
-TRANSLATIONS_DISABLED = translations/keepassx-cs_CZ.ts
+TRANSLATIONS_DISABLED = translations/keepassz-cs_CZ.ts
 
 TRANSLATIONS_QT = translations/qt_fi.ts \
                   translations/qt_gl_ES.ts \
@@ -192,8 +192,8 @@ TRANSLATIONS_QT = translations/qt_fi.ts \
 
 # missing Qt translation: nb_NO
 
-TRANSLATIONS = $$TRANSLATIONS_KX $$TRANSLATIONS_DISABLED translations/keepassx-xx_XX.ts
-#TRANSLATIONS_UPDATE = $$TRANSLATIONS_KX $$TRANSLATIONS_DISABLED translations/keepassx-xx_XX.ts
+TRANSLATIONS = $$TRANSLATIONS_KX $$TRANSLATIONS_DISABLED translations/keepassz-xx_XX.ts
+#TRANSLATIONS_UPDATE = $$TRANSLATIONS_KX $$TRANSLATIONS_DISABLED translations/keepassz-xx_XX.ts
 #TRANSLATIONS_COMPILE = $$TRANSLATIONS_KX $$TRANSLATIONS_QT
 
 HEADERS += main.h \
@@ -249,11 +249,11 @@ HEADERS += main.h \
 #           dialogs/TrashCanDlg.h \
            import/Import.h \
 #           import/Import_GnuKeyRing.h \
-           import/Import_KeePassX_Xml.h \
+           import/Import_keepassz_Xml.h \
            import/Import_KWalletXml.h \
            import/Import_PwManager.h \
            export/Export.h \
-           export/Export_KeePassX_Xml.h \
+           export/Export_keepassz_Xml.h \
            export/Export_Txt.h \
            plugins/interfaces/IFileDialog.h \
            plugins/interfaces/IIconTheme.h \
@@ -308,11 +308,11 @@ SOURCES += main.cpp \
 #           dialogs/TrashCanDlg.cpp \
            import/Import.cpp \
 #           import/Import_GnuKeyRing.cpp \
-           import/Import_KeePassX_Xml.cpp \
+           import/Import_keepassz_Xml.cpp \
            import/Import_KWalletXml.cpp \
            import/Import_PwManager.cpp \
            export/Export.cpp \
-           export/Export_KeePassX_Xml.cpp \
+           export/Export_keepassz_Xml.cpp \
            export/Export_Txt.cpp
 
 isEqual(PRECOMPILED,0) {
@@ -337,8 +337,8 @@ RESOURCES += res/resources.qrc
 
 #exists($$QMAKE_LRELEASE) {
 #	updateqm.input = TRANSLATIONS_COMPILE
-#	updateqm.output = ../share/keepassx/i18n/${QMAKE_FILE_BASE}.qm
-#	updateqm.commands = $$QMAKE_LRELEASE ${QMAKE_FILE_IN} -qm ../share/keepassx/i18n/${QMAKE_FILE_BASE}.qm
+#	updateqm.output = ../share/keepassz/i18n/${QMAKE_FILE_BASE}.qm
+#	updateqm.commands = $$QMAKE_LRELEASE ${QMAKE_FILE_IN} -qm ../share/keepassz/i18n/${QMAKE_FILE_BASE}.qm
 #	updateqm.CONFIG += no_link
 #	
 #	QMAKE_EXTRA_COMPILERS += updateqm

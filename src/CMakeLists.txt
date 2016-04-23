@@ -122,22 +122,22 @@ SET(keepassx_FORMS
 SET(keepassx_RESOURCES res/resources.qrc)
 
 set(keepassx_TRANSLATIONS
-#	translations/keepassx-cs_CZ.ts
-	translations/keepassx-de_DE.ts
-	translations/keepassx-es_ES.ts
-	translations/keepassx-fi_FI.ts
-	translations/keepassx-fr_FR.ts
-	translations/keepassx-gl_ES.ts
-	translations/keepassx-hu_HU.ts
-	translations/keepassx-it_IT.ts
-	translations/keepassx-ja_JP.ts
-	translations/keepassx-nb_NO.ts
-	translations/keepassx-nl_NL.ts
-	translations/keepassx-pl_PL.ts
-	translations/keepassx-ru_RU.ts
-	translations/keepassx-tr_TR.ts
-	translations/keepassx-uk_UA.ts
-	translations/keepassx-zh_CN.ts
+#	translations/keepassz-cs_CZ.ts
+	translations/keepassz-de_DE.ts
+	translations/keepassz-es_ES.ts
+	translations/keepassz-fi_FI.ts
+	translations/keepassz-fr_FR.ts
+	translations/keepassz-gl_ES.ts
+	translations/keepassz-hu_HU.ts
+	translations/keepassz-it_IT.ts
+	translations/keepassz-ja_JP.ts
+	translations/keepassz-nb_NO.ts
+	translations/keepassz-nl_NL.ts
+	translations/keepassz-pl_PL.ts
+	translations/keepassz-ru_RU.ts
+	translations/keepassz-tr_TR.ts
+	translations/keepassz-uk_UA.ts
+	translations/keepassz-zh_CN.ts
 	translations/qt_fi.ts
 	translations/qt_hu.ts
 	translations/qt_it.ts

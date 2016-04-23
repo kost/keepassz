@@ -117,21 +117,22 @@
            <item>
             <widget class="LinkLabel" name="label_5">
              <property name="text">
-              <string>http://keepassx.sourceforge.net</string>
+              <string>https://github.com/kost/keepassz/</string>
              </property>
             </widget>
            </item>
            <item>
             <widget class="LinkLabel" name="label_3">
              <property name="text">
-              <string>keepassx@gmail.com</string>
+              <string>https://github.com/kost/keepassz/issues/</string>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_4">
              <property name="text">
-              <string>Copyright (C) 2005 - 2009 KeePassX Team
+              <string>Copyright (C) 2015-2016. Kost
+Copyright (C) 2005 - 2009 KeePassX Team
 KeePassX is distributed under the terms of the
 General Public License (GPL) version 2.</string>
              </property>

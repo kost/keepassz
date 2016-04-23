@@ -14,5 +14,5 @@ if [ "$LUPDATE" = "" ] ; then
 fi
 
 cd `dirname $0`/src
-rm translations/keepassx-xx_XX.ts
+rm translations/keepassz-xx_XX.ts
 $LUPDATE src.pro
