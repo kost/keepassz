@@ -146,7 +146,7 @@ QString getImageFile(const QString& name){
 	else{
 		QString errMsg = QApplication::translate("Main","File '%1' could not be found.").arg(name);
 		showErrMsg(errMsg);
-		qFatal("File '%s' could not be found.", CSTR(errMsg));
+		qFatal("Error: '%s'", CSTR(errMsg));
 		return QString();
 	}
 }
