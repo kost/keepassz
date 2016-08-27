@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kost/keepassz.png)](https://travis-ci.org/kost/keepassz)
+
 # keepassz
 Keepassz is improved Keepassx 0.x/1.x
 
