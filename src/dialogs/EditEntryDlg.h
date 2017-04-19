@@ -59,6 +59,7 @@ class CEditEntryDlg : public QDialog, private Ui_EditEntryDialog
 		void OnClose();
 		void OnCustomizeSequence();
 		void OnSelectTarget();
+		void OnCommentToggle();
 		
 	private:
 		virtual void paintEvent(QPaintEvent*);

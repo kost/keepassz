@@ -50,6 +50,7 @@ CEditEntryDlg::CEditEntryDlg(IDatabase* _db, IEntryHandle* _entry,QWidget* paren
 	connect(buttonBox->button(QDialogButtonBox::Cancel), SIGNAL(clicked()), this, SLOT( OnButtonCancel()));
 	connect(ButtonOpenAttachment, SIGNAL(clicked()), this, SLOT( OnNewAttachment()));
 	connect(ButtonDeleteAttachment, SIGNAL(clicked()), this, SLOT( OnDeleteAttachment()));
+	connect(commentLabel, SIGNAL(clicked()), this, SLOT( OnCommentToggle()));
 	connect(ButtonSaveAttachment, SIGNAL(clicked()), this, SLOT( OnSaveAttachment()));
 	connect(ButtonGenPw, SIGNAL(clicked()), this, SLOT( OnButtonGenPw()));
 	connect(buttonBox->button(QDialogButtonBox::Ok), SIGNAL(clicked()),this,SLOT(OnButtonOK()));
@@ -147,6 +148,14 @@ CEditEntryDlg::CEditEntryDlg(IDatabase* _db, IEntryHandle* _entry,QWidget* paren
 }
 
 CEditEntryDlg::~CEditEntryDlg(){
+}
+
+void CEditEntryDlg::OnCommentToggle(){
+	if (Edit_Comment->isVisible()) {
+		Edit_Comment->setVisible(false);
+	} else {
+		Edit_Comment->setVisible(true);
+	}
 }
 
 void CEditEntryDlg::resizeEvent(QResizeEvent *event){
