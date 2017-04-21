@@ -55,7 +55,7 @@ int main(int argc, char **argv)
 #ifdef Q_WS_WIN
 	// Make sure Windows doesn't load DLLs from the current working directory
 	SetDllDirectoryA("");
-	SetSearchPathMode(BASE_SEARCH_PATH_ENABLE_SAFE_SEARCHMODE);
+	// SetSearchPathMode(BASE_SEARCH_PATH_ENABLE_SAFE_SEARCHMODE);
 #endif
 
 	setlocale(LC_CTYPE, "");
